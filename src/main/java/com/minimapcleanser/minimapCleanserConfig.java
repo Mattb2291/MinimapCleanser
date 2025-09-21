@@ -22,205 +22,208 @@ public interface minimapCleanserConfig extends Config
     default GIMIconEnum GIMConfig() { return GIMIconEnum.CONDITIONAL; }
 
     //region Game Features Region
-    @ConfigItem(
-            keyName = "gameFeaturesBoolean",
-            name = "Hide all Game Features",
-            description = "Remove all game features from the minimap (overrides selection below).",
-            position = 2
-    )
-    default boolean gameFeaturesBoolean() { return false; }
-
     @ConfigSection(
             name = "Game Features",
             description = "The minimap icons of game features.",
-            position = 3,
+            position = 2,
             closedByDefault = true
     )
     String gameFeatureIconSection = "gameFeatureIconSection";
 
     enum AgilitySCIconEnum {
         VIEW_ALL,
-        //VIEW_ABLE_ONLY,
+        VIEW_ABLE_ONLY,
         HIDE_ALL
     }
     @ConfigItem(
-            keyName = "agiligySCConfig",
+            keyName = "agilitySCConfig",
             name = "Agility Shortcuts",
             description = "Choose whether to show all icons, show only accessible agility shortcuts, or hide all icons.",
+            position = 3,
             section = gameFeatureIconSection
     )
-    default AgilitySCIconEnum agiligySCConfig() { return AgilitySCIconEnum.VIEW_ALL; }
+    default AgilitySCIconEnum agilitySCConfig() { return AgilitySCIconEnum.VIEW_ALL; }
 
     @ConfigItem(
             keyName = "altarBoolean",
-            name = "Altars",
+            name = "Hide Altars",
             description = "Remove altar icons from the minimap",
+            position = 4,
             section = gameFeatureIconSection
     )
     default boolean altarBoolean() { return false; }
 
     @ConfigItem(
             keyName = "bankBoolean",
-            name = "Banks",
+            name = "Hide Banks",
             description = "Remove bank icons from the minimap",
+            position = 5,
             section = gameFeatureIconSection
     )
     default boolean bankBoolean() { return false; }
 
     @ConfigItem(
             keyName = "clanHubBoolean",
-            name = "Clan Hub",
+            name = "Hide Clan Hub",
             description = "Remove clan hub icons from the minimap",
+            position = 6,
             section = gameFeatureIconSection
     )
     default boolean clanHubBoolean() { return false; }
 
     @ConfigItem(
             keyName = "combatAchievementsBoolean",
-            name = "Combat Achievements",
+            name = "Hide Combat Achievements",
             description = "Remove combat achievement icons from the minimap",
+            position = 7,
             section = gameFeatureIconSection
     )
     default boolean combatAchievementsBoolean() { return false; }
 
     @ConfigItem(
             keyName = "deathsOfficeBoolean",
-            name = "Death's Office",
+            name = "Hide Death's Office",
             description = "Remove Death's office icons from the minimap",
+            position = 8,
             section = gameFeatureIconSection
     )
     default boolean deathsOfficeBoolean() { return false; }
 
     @ConfigItem(
             keyName = "DnDBoolean",
-            name = "Distraction and Diversions",
+            name = "Hide Distraction and Diversions",
             description = "Remove D&D icons from the minimap",
+            position = 9,
             section = gameFeatureIconSection
     )
     default boolean DnDBoolean() { return false; }
 
     @ConfigItem(
             keyName = "dungeonBoolean",
-            name = "Dungeons",
+            name = "Hide Dungeons",
             description = "Remove dungeon icons from the minimap",
+            position = 10,
             section = gameFeatureIconSection
     )
     default boolean dungeonBoolean() { return false; }
 
     @ConfigItem(
             keyName = "hairBoolean",
-            name = "Hairdresser",
+            name = "Hide Hairdresser",
             description = "Remove hairdresser icons from the minimap",
+            position = 11,
             section = gameFeatureIconSection
     )
     default boolean hairBoolean() { return false; }
 
     @ConfigItem(
             keyName = "holidayBoolean",
-            name = "Holiday Events",
+            name = "Hide Holiday Events",
             description = "Remove holiday event icons from the minimap",
+            position = 12,
             section = gameFeatureIconSection
     )
     default boolean holidayBoolean() { return false; }
 
     @ConfigItem(
             keyName = "houseBoolean",
-            name = "House Portal",
+            name = "Hide House Portal",
             description = "Remove house portal icons from the minimap",
+            position = 13,
             section = gameFeatureIconSection
     )
     default boolean houseBoolean() { return false; }
 
     @ConfigItem(
             keyName = "makeoverBoolean",
-            name = "Makeover Mage",
+            name = "Hide Makeover Mage",
             description = "Remove makeover mage icons from the minimap",
+            position = 14,
             section = gameFeatureIconSection
     )
     default boolean makeoverBoolean() { return false; }
 
     @ConfigItem(
             keyName = "minigameBoolean",
-            name = "Minigames",
+            name = "Hide Minigames",
             description = "Remove minigame icons from the minimap",
+            position = 15,
             section = gameFeatureIconSection
     )
     default boolean minigameBoolean() { return false; }
 
     @ConfigItem(
             keyName = "pollBoolean",
-            name = "Poll Booth",
+            name = "Hide Poll Booth",
             description = "Remove poll booth icons from the minimap",
+            position = 16,
             section = gameFeatureIconSection
     )
     default boolean pollBoolean() { return false; }
 
     enum QuestIconEnum {
         VIEW_ALL,
-        //VIEW_OUTSTANDING,
+        VIEW_INCOMPLETE,
         HIDE_ALL
     }
     @ConfigItem(
             keyName = "questConfig",
             name = "Quests",
             description = "Choose whether to show all icons, show only outstanding quests, or hide all icons.",
+            position = 17,
             section = gameFeatureIconSection
     )
     default QuestIconEnum questConfig() { return QuestIconEnum.VIEW_ALL; }
 
     @ConfigItem(
             keyName = "raidBoolean",
-            name = "Raids",
+            name = "Hide Raids",
             description = "Remove raid icons from the minimap",
+            position = 18,
             section = gameFeatureIconSection
     )
     default boolean raidBoolean() { return false; }
 
     @ConfigItem(
             keyName = "taskBoolean",
-            name = "Task Masters",
+            name = "Hide Task Masters",
             description = "Remove task master icons from the minimap",
+            position = 19,
             section = gameFeatureIconSection
     )
     default boolean taskBoolean() { return false; }
 
     @ConfigItem(
             keyName = "transportBoolean",
-            name = "Transportation",
+            name = "Hide Transportation",
             description = "Remove transportation icons from the minimap",
+            position = 20,
             section = gameFeatureIconSection
     )
     default boolean transportBoolean() { return false; }
 
     @ConfigItem(
             keyName = "transportFRBoolean",
-            name = "Transportation (Fairy Rings)",
+            name = "Hide Transportation (Fairy Rings)",
             description = "Remove fairy ring transportation icons from the minimap",
+            position = 21,
             section = gameFeatureIconSection
     )
     default boolean transportFRBoolean() { return false; }
     //endregion
 
     //region Tutors Region
-    @ConfigItem(
-            keyName = "tutorsBoolean",
-            name = "Hide all Tutors",
-            description = "Remove all tutor icons from the minimap (overrides selection below).",
-            position = 4
-    )
-    default boolean tutorsBoolean() { return false; }
-
     @ConfigSection(
             name = "Tutors",
             description = "The minimap icons of Tutors.",
-            position = 5,
+            position = 22,
             closedByDefault = true
     )
     String tutorIconSection = "tutorIconSection";
 
     @ConfigItem(
             keyName = "bankTutBoolean",
-            name = "Bank Tutor",
+            name = "Hide Bank Tutor",
             description = "Remove the Bank Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -228,7 +231,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "bondTutBoolean",
-            name = "Bond Tutor",
+            name = "Hide Bond Tutor",
             description = "Remove the Bond Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -236,7 +239,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "clueTutBoolean",
-            name = "Clue Tutor",
+            name = "Hide Clue Tutor",
             description = "Remove the Clue Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -244,7 +247,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "combatTutBoolean",
-            name = "Combat Tutor",
+            name = "Hide Combat Tutor",
             description = "Remove the Combat Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -252,7 +255,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "cookTutBoolean",
-            name = "Cooking Tutor",
+            name = "Hide Cooking Tutor",
             description = "Remove the Cooking Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -260,7 +263,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "craftTutBoolean",
-            name = "Crafting Tutor",
+            name = "Hide Crafting Tutor",
             description = "Remove the Crafting Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -268,7 +271,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "dangerTutBoolean",
-            name = "Danger Tutor",
+            name = "Hide Danger Tutor",
             description = "Remove the Danger Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -276,7 +279,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "deadmanTutBoolean",
-            name = "Deadman Tutor",
+            name = "Hide Deadman Tutor",
             description = "Remove the Deadman Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -284,7 +287,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "fishTutBoolean",
-            name = "Fishing Tutor",
+            name = "Hide Fishing Tutor",
             description = "Remove the Fishing Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -292,7 +295,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "huntTutBoolean",
-            name = "Hunter Tutor",
+            name = "Hide Hunter Tutor",
             description = "Remove the Hunter Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -300,7 +303,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "ironTutBoolean",
-            name = "Ironman Tutor",
+            name = "Hide Ironman Tutor",
             description = "Remove the Ironman Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -308,7 +311,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "leaguesTutBoolean",
-            name = "Leagues Tutor",
+            name = "Hide Leagues Tutor",
             description = "Remove the Leagues Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -316,7 +319,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "lumbyTutBoolean",
-            name = "Lumbridge Guide",
+            name = "Hide Lumbridge Guide",
             description = "Remove the Lumbridge Guide icon from the minimap",
             section = tutorIconSection
     )
@@ -324,7 +327,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "mineTutBoolean",
-            name = "Mining Tutor",
+            name = "Hide Mining Tutor",
             description = "Remove the Mining Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -332,7 +335,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "prayTutBoolean",
-            name = "Prayer Tutor",
+            name = "Hide Prayer Tutor",
             description = "Remove the Prayer Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -340,7 +343,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "securityTutBoolean",
-            name = "Security Tutor",
+            name = "Hide Security Tutor",
             description = "Remove the Security Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -348,7 +351,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "smithTutBoolean",
-            name = "Smithing Tutor",
+            name = "Hide Smithing Tutor",
             description = "Remove the Smithing Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -356,7 +359,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "wcTutBoolean",
-            name = "Woodcutting Tutor",
+            name = "Hide Woodcutting Tutor",
             description = "Remove the Woodcutting Tutor icon from the minimap",
             section = tutorIconSection
     )
@@ -364,25 +367,17 @@ public interface minimapCleanserConfig extends Config
     //endregion
 
     //region Training Region
-    @ConfigItem(
-            keyName = "trainingBoolean",
-            name = "Hide all Training icons",
-            description = "Remove all training icons from the minimap (overrides selection below).",
-            position = 6
-    )
-    default boolean trainingBoolean() { return false; }
-
     @ConfigSection(
             name = "Training",
             description = "The minimap icons of training areas.",
-            position = 7,
+            position = 23,
             closedByDefault = true
     )
     String trainingIconSection = "trainingIconSection";
 
     enum AgilityTrainIconEnum {
         VIEW_ALL,
-        //VIEW_ABLE_ONLY,
+        VIEW_ABLE_ONLY,
         HIDE_ALL
     }
     @ConfigItem(
@@ -395,15 +390,23 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "anvilBoolean",
-            name = "Anvils",
+            name = "Hide Anvils",
             description = "Remove anvil icons from the minimap",
             section = trainingIconSection
     )
     default boolean anvilBoolean() { return false; }
 
     @ConfigItem(
+            keyName = "zalcanoAltarBoolean",
+            name = "Hide Altar (Zalcano)",
+            description = "Remove the Zalcano altar icon from the minimap",
+            section = trainingIconSection
+    )
+    default boolean zalcanoAltarBoolean() { return false; }
+
+    @ConfigItem(
             keyName = "birdhousesBoolean",
-            name = "Bird House Sites",
+            name = "Hide Bird House Sites",
             description = "Remove bird house site icons from the minimap",
             section = trainingIconSection
     )
@@ -411,7 +414,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "breweryBoolean",
-            name = "Brewery",
+            name = "Hide Brewery",
             description = "Remove brewery icons from the minimap",
             section = trainingIconSection
     )
@@ -419,7 +422,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "dummyBoolean",
-            name = "Combat Training",
+            name = "Hide Combat Training",
             description = "Remove combat training icons from the minimap",
             section = trainingIconSection
     )
@@ -427,7 +430,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "cookRangeBoolean",
-            name = "Cooking Range",
+            name = "Hide Cooking Range",
             description = "Remove cooking range icons from the minimap",
             section = trainingIconSection
     )
@@ -435,7 +438,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "dairyBoolean",
-            name = "Dairy Churn",
+            name = "Hide Dairy Churn",
             description = "Remove dairy churn icons from the minimap",
             section = trainingIconSection
     )
@@ -443,7 +446,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "dairyCowBoolean",
-            name = "Dairy Cow",
+            name = "Hide Dairy Cow",
             description = "Remove dairy cow icons from the minimap",
             section = trainingIconSection
     )
@@ -451,7 +454,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "farmPatchBoolean",
-            name = "Farming Patches",
+            name = "Hide Farming Patches",
             description = "Remove farming patch icons from the minimap",
             section = trainingIconSection
     )
@@ -459,7 +462,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "fishSpotBoolean",
-            name = "Fishing Spots",
+            name = "Hide Fishing Spots",
             description = "Remove fishing icons from the minimap",
             section = trainingIconSection
     )
@@ -467,7 +470,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "furnaceBoolean",
-            name = "Furnace",
+            name = "Hide Furnace",
             description = "Remove furnace icons from the minimap",
             section = trainingIconSection
     )
@@ -475,7 +478,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "grindBoolean",
-            name = "Grindstone",
+            name = "Hide Grindstone",
             description = "Remove grindstone icons from the minimap",
             section = trainingIconSection
     )
@@ -483,7 +486,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "huntTrainingBoolean",
-            name = "Hunter Training",
+            name = "Hide Hunter Training",
             description = "Remove hunter icons from the minimap",
             section = trainingIconSection
     )
@@ -491,7 +494,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "loomBoolean",
-            name = "Loom",
+            name = "Hide Loom",
             description = "Remove loom icons from the minimap",
             section = trainingIconSection
     )
@@ -499,7 +502,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "miningSiteBoolean",
-            name = "Mining Site",
+            name = "Hide Mining Site",
             description = "Remove mining icons from the minimap",
             section = trainingIconSection
     )
@@ -507,7 +510,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "polishWheelBoolean",
-            name = "Polishing Wheel",
+            name = "Hide Polishing Wheel",
             description = "Remove polishing wheel icons from the minimap",
             section = trainingIconSection
     )
@@ -515,7 +518,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "potteryWheelBoolean",
-            name = "Pottery Wheel",
+            name = "Hide Pottery Wheel",
             description = "Remove pottery wheel icons from the minimap",
             section = trainingIconSection
     )
@@ -523,7 +526,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "rareTreesBoolean",
-            name = "Rare Trees",
+            name = "Hide Rare Trees",
             description = "Remove rare tree icons from the minimap",
             section = trainingIconSection
     )
@@ -531,7 +534,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "sandBoolean",
-            name = "Sandpit",
+            name = "Hide Sandpit",
             description = "Remove sandpit icons from the minimap",
             section = trainingIconSection
     )
@@ -539,7 +542,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "singbowlBoolean",
-            name = "Singing Bowl",
+            name = "Hide Singing Bowl",
             description = "Remove singing bowl icons from the minimap",
             section = trainingIconSection
     )
@@ -547,7 +550,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "slayerMasterBoolean",
-            name = "Slayer Master",
+            name = "Hide Slayer Master",
             description = "Remove slayer master icons from the minimap",
             section = trainingIconSection
     )
@@ -555,7 +558,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "spinWheelBoolean",
-            name = "Spinning Wheel",
+            name = "Hide Spinning Wheel",
             description = "Remove spinning wheel icons from the minimap",
             section = trainingIconSection
     )
@@ -563,7 +566,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "stagnantWaterBoolean",
-            name = "Stagnant Water Source",
+            name = "Hide Stagnant Water Source",
             description = "Remove stagnant water source icons from the minimap",
             section = trainingIconSection
     )
@@ -571,7 +574,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "thiefActivityBoolean",
-            name = "Thieving Activity",
+            name = "Hide Thieving Activity",
             description = "Remove thieving icons from the minimap",
             section = trainingIconSection
     )
@@ -579,7 +582,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "tripHammerBoolean",
-            name = "Trip Hammer",
+            name = "Hide Trip Hammer",
             description = "Remove trip hammer icons from the minimap",
             section = trainingIconSection
     )
@@ -587,7 +590,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "valeTotemBoolean",
-            name = "Vale Totem",
+            name = "Hide Vale Totem",
             description = "Remove vale totem icons from the minimap",
             section = trainingIconSection
     )
@@ -595,7 +598,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "waterSourceBoolean",
-            name = "Water Source",
+            name = "Hide Water Source",
             description = "Remove water source icons from the minimap",
             section = trainingIconSection
     )
@@ -603,7 +606,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "windmillBoolean",
-            name = "Windmill",
+            name = "Hide Windmill",
             description = "Remove windmill icons from the minimap",
             section = trainingIconSection
     )
@@ -611,7 +614,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "wcStumpBoolean",
-            name = "Woodcutting Stump",
+            name = "Hide Woodcutting Stump",
             description = "Remove woodcutting stump icons from the minimap",
             section = trainingIconSection
     )
@@ -619,25 +622,17 @@ public interface minimapCleanserConfig extends Config
     //endregion
 
     //region Shopping Region
-    @ConfigItem(
-            keyName = "shoppingBoolean",
-            name = "Hide all Shopping icons",
-            description = "Remove all shops from the minimap (overrides selection below).",
-            position = 8
-    )
-    default boolean shoppingBoolean() { return false; }
-
     @ConfigSection(
             name = "Shopping",
             description = "The minimap icons of shops.",
-            position = 9,
+            position = 24,
             closedByDefault = true
     )
     String shoppingIconSection = "shoppingIconSection";
 
     @ConfigItem(
             keyName = "amuletShopBoolean",
-            name = "Amulet Shop",
+            name = "Hide Amulet Shop",
             description = "Remove amulet shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -645,7 +640,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "apothecaryBoolean",
-            name = "Apothecary",
+            name = "Hide Apothecary",
             description = "Remove apothecary icons from the minimap",
             section = shoppingIconSection
     )
@@ -653,7 +648,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "archeryShopBoolean",
-            name = "Archery Shop",
+            name = "Hide Archery Shop",
             description = "Remove archery shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -661,7 +656,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "axeShopBoolean",
-            name = "Axe Shop",
+            name = "Hide Axe Shop",
             description = "Remove axe shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -669,7 +664,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "BHshopBoolean",
-            name = "Bounty Hunter Shop",
+            name = "Hide Bounty Hunter Shop",
             description = "Remove Bounty Hunter shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -677,7 +672,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "candleShopBoolean",
-            name = "Candle Shop",
+            name = "Hide Candle Shop",
             description = "Remove candle shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -685,7 +680,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "chainbodyShopBoolean",
-            name = "Chainbody Shop",
+            name = "Hide Chainbody Shop",
             description = "Remove chainbody shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -693,7 +688,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "clothesShopBoolean",
-            name = "Clothes Shop",
+            name = "Hide Clothes Shop",
             description = "Remove clothes shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -701,7 +696,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "cookeryShopBoolean",
-            name = "Cookery Shop",
+            name = "Hide Cookery Shop",
             description = "Remove cookery shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -709,7 +704,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "craftingShopBoolean",
-            name = "Crafting Shop",
+            name = "Hide Crafting Shop",
             description = "Remove crafting shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -717,7 +712,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "dyeShopBoolean",
-            name = "Dye Trader",
+            name = "Hide Dye Trader",
             description = "Remove dye trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -725,7 +720,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "estateBoolean",
-            name = "Estate Agent",
+            name = "Hide Estate Agent",
             description = "Remove estate agent icons from the minimap",
             section = shoppingIconSection
     )
@@ -733,7 +728,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "farmingShopBoolean",
-            name = "Farming Shop",
+            name = "Hide Farming Shop",
             description = "Remove farming shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -741,7 +736,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "fishingShopBoolean",
-            name = "Fishing Shop",
+            name = "Hide Fishing Shop",
             description = "Remove fishing shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -749,7 +744,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "foodShopBoolean",
-            name = "Food Shop",
+            name = "Hide Food Shop",
             description = "Remove food shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -757,7 +752,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "forestryShopBoolean",
-            name = "Forestry Shop",
+            name = "Hide Forestry Shop",
             description = "Remove forestry shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -765,7 +760,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "furShopBoolean",
-            name = "Fur Trader",
+            name = "Hide Fur Trader",
             description = "Remove fur trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -773,7 +768,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "gardenSupplierBoolean",
-            name = "Garden Supplier",
+            name = "Hide Garden Supplier",
             description = "Remove garden supplier icons from the minimap",
             section = shoppingIconSection
     )
@@ -781,7 +776,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "gemShopBoolean",
-            name = "Gem Shop",
+            name = "Hide Gem Shop",
             description = "Remove gem shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -789,7 +784,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "generalStoreBoolean",
-            name = "General Store",
+            name = "Hide General Store",
             description = "Remove general store icons from the minimap",
             section = shoppingIconSection
     )
@@ -797,7 +792,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "GEBoolean",
-            name = "Grand Exchange",
+            name = "Hide Grand Exchange",
             description = "Remove grand exchange icons from the minimap",
             section = shoppingIconSection
     )
@@ -805,7 +800,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "helmetShopBoolean",
-            name = "Helmet Shop",
+            name = "Hide Helmet Shop",
             description = "Remove helmet shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -813,7 +808,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "herbalistBoolean",
-            name = "Herbalist",
+            name = "Hide Herbalist",
             description = "Remove herbalist icons from the minimap",
             section = shoppingIconSection
     )
@@ -821,7 +816,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "holidayItemsBoolean",
-            name = "Holiday Items Trader",
+            name = "Hide Holiday Items Trader",
             description = "Remove holiday items trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -829,7 +824,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "hunterShopBoolean",
-            name = "Hunter Shop",
+            name = "Hide Hunter Shop",
             description = "Remove hunter shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -837,7 +832,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "jewelleryShopBoolean",
-            name = "Jewellery Shop",
+            name = "Hide Jewellery Shop",
             description = "Remove jewellery shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -845,7 +840,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "WOMBoolean",
-            name = "Junk Checker",
+            name = "Hide Junk Checker",
             description = "Remove junk checker icons from the minimap",
             section = shoppingIconSection
     )
@@ -853,7 +848,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "kebabShopBoolean",
-            name = "Kebab seller",
+            name = "Hide Kebab seller",
             description = "Remove kebab shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -861,7 +856,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "maceShopBoolean",
-            name = "Mace Shop",
+            name = "Hide Mace Shop",
             description = "Remove mace shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -869,7 +864,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "magicShopBoolean",
-            name = "Magic Shop",
+            name = "Hide Magic Shop",
             description = "Remove magic shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -877,7 +872,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "miningShopBoolean",
-            name = "Mining Shop",
+            name = "Hide Mining Shop",
             description = "Remove mining shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -885,7 +880,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "newspaperBoolean",
-            name = "Newspaper Trader",
+            name = "Hide Newspaper Trader",
             description = "Remove newspaper trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -893,7 +888,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "petInsuranceBoolean",
-            name = "Pet Insurance Shop",
+            name = "Hide Pet Insurance Shop",
             description = "Remove pet insurance icons from the minimap",
             section = shoppingIconSection
     )
@@ -901,7 +896,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "platebodyShopBoolean",
-            name = "Platebody Shop",
+            name = "Hide Platebody Shop",
             description = "Remove platebody shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -909,7 +904,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "platelegsShopBoolean",
-            name = "Platelegs Shop",
+            name = "Hide Platelegs Shop",
             description = "Remove platelegs shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -917,7 +912,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "skirtShopBoolean",
-            name = "Plateskirt Shop",
+            name = "Hide Skirt Shop",
             description = "Remove skirt shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -925,7 +920,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "pricingExpertsRuneBoolean",
-            name = "Pricing Experts (runes)",
+            name = "Hide Pricing Experts (runes)",
             description = "Remove pricing expert (runes) icons from the minimap",
             section = shoppingIconSection
     )
@@ -933,7 +928,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "pricingExpertsHerbsBoolean",
-            name = "Pricing Experts (herbs)",
+            name = "Hide Pricing Experts (herbs)",
             description = "Remove pricing expert (herbs) icons from the minimap",
             section = shoppingIconSection
     )
@@ -941,7 +936,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "pricingExpertsLogsBoolean",
-            name = "Pricing Experts (logs)",
+            name = "Hide Pricing Experts (logs)",
             description = "Remove pricing expert (logs) icons from the minimap",
             section = shoppingIconSection
     )
@@ -949,7 +944,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "pricingExpertsOreBoolean",
-            name = "Pricing Experts (ores & bars)",
+            name = "Hide Pricing Experts (ores & bars)",
             description = "Remove pricing expert (ores & bars) icons from the minimap",
             section = shoppingIconSection
     )
@@ -957,7 +952,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "pricingExpertsWeaponBoolean",
-            name = "Pricing Experts (weapons & armour)",
+            name = "Hide Pricing Experts (weapons & armour)",
             description = "Remove pricing expert (weapons & armour) icons from the minimap",
             section = shoppingIconSection
     )
@@ -965,7 +960,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "pubBarBoolean",
-            name = "Pub/Bar",
+            name = "Hide Pub/Bar",
             description = "Remove pub and bar icons from the minimap",
             section = shoppingIconSection
     )
@@ -973,7 +968,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "ropeShopBoolean",
-            name = "Rope Trader",
+            name = "Hide Rope Trader",
             description = "Remove rope trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -981,7 +976,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "sawmillBoolean",
-            name = "Sawmill",
+            name = "Hide Sawmill",
             description = "Remove sawmill icons from the minimap",
             section = shoppingIconSection
     )
@@ -989,7 +984,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "scimitarShopBoolean",
-            name = "Scimitar Shop",
+            name = "Hide Scimitar Shop",
             description = "Remove scimitar shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -997,7 +992,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "shieldShopBoolean",
-            name = "Shield Shop",
+            name = "Hide Shield Shop",
             description = "Remove shield shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -1005,7 +1000,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "silkShopBoolean",
-            name = "Silk Trader",
+            name = "Hide Silk Trader",
             description = "Remove silk trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -1013,7 +1008,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "silverShopBoolean",
-            name = "Silver Shop",
+            name = "Hide Silver Shop",
             description = "Remove silver shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -1021,7 +1016,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "speedShopBoolean",
-            name = "Speedrunning Shop",
+            name = "Hide Speedrunning Shop",
             description = "Remove speedrunning shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -1029,7 +1024,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "spiceShopBoolean",
-            name = "Spice Shop",
+            name = "Hide Spice Shop",
             description = "Remove spice shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -1037,7 +1032,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "staffShopBoolean",
-            name = "Staff Shop",
+            name = "Hide Staff Shop",
             description = "Remove staff shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -1045,7 +1040,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "stonemasonBoolean",
-            name = "Stonemason",
+            name = "Hide Stonemason",
             description = "Remove stonemason icons from the minimap",
             section = shoppingIconSection
     )
@@ -1053,7 +1048,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "swordShopBoolean",
-            name = "Sword Shop",
+            name = "Hide Sword Shop",
             description = "Remove sword shop icons from the minimap",
             section = shoppingIconSection
     )
@@ -1061,7 +1056,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "tanneryBoolean",
-            name = "Tannery",
+            name = "Hide Tannery",
             description = "Remove tannery icons from the minimap",
             section = shoppingIconSection
     )
@@ -1069,7 +1064,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "taxidermistBoolean",
-            name = "Taxidermist",
+            name = "Hide Taxidermist",
             description = "Remove taxidermist icons from the minimap",
             section = shoppingIconSection
     )
@@ -1077,7 +1072,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "teaShopBoolean",
-            name = "Tea Trader",
+            name = "Hide Tea Trader",
             description = "Remove tea trader icons from the minimap",
             section = shoppingIconSection
     )
@@ -1085,7 +1080,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "vegShopBoolean",
-            name = "Vegetable Store",
+            name = "Hide Vegetable Store",
             description = "Remove vegetable store icons from the minimap",
             section = shoppingIconSection
     )
@@ -1093,7 +1088,7 @@ public interface minimapCleanserConfig extends Config
 
     @ConfigItem(
             keyName = "wineShopBoolean",
-            name = "Wine Trader",
+            name = "Hide Wine Trader",
             description = "Remove wine trader icons from the minimap",
             section = shoppingIconSection
     )
