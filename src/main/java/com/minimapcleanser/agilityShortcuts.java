@@ -201,7 +201,7 @@ enum agilityShortcuts
                 }
                 if (as.mapOfRequiredAchievementDiaryAndIncompleteValue != null) {
                     for (Map.Entry<Integer, Integer> entry : as.mapOfRequiredAchievementDiaryAndIncompleteValue.entrySet()) {
-                        if (client.getVar(entry.getKey()) == entry.getValue()) {
+                        if (client.getVarbitValue(entry.getKey()) == entry.getValue()) {
                             return false;
                         }
                     }

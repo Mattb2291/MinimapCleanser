@@ -207,7 +207,7 @@ enum quests
                 int endState = (int) client.getDBTableField(q.questDBTRow, DBTableID.Quest.COL_ENDSTATE, 0)[0];
                 int completionState;
                 if (q.questVarbitIfPossible != null) {
-                    completionState = client.getVar(q.questVarbitIfPossible);
+                    completionState = client.getVarbitValue(q.questVarbitIfPossible);
                 }
                 else {
                     completionState = client.getVarpValue(q.questVarPlayer);
